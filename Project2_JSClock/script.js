@@ -9,11 +9,11 @@ function setTime() {
   console.log(seconds);
 
   const MinuteHand = document.querySelector('#MinuteHand');
-  var minutes = time.getMinutes() * 6;
+  var minutes = time.getMinutes() * 6 + seconds / 60;
   MinuteHand.style.transform = `translateX(3px) rotate(${minutes}deg)`;
 
   const HourHand = document.querySelector('#HourHand');
-  var hours = time.getHours() * 6;
+  var hours = time.getHours() * 15 + minutes / 60;
   HourHand.style.transform = `translateX(3px) rotate(${hours}deg)`;
 }
 
