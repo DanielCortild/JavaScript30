@@ -1,0 +1,49 @@
+:root {
+  --fontsize: 20px;
+  --shadow: 20px;
+  --color: #FF0000;
+}
+
+#container {
+  width: 100%;
+}
+
+#title {
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: center;
+  font-size: var(--fontsize);
+  color: var(--color);
+  text-shadow: 0 0 var(--shadow) #000;
+}
+
+#inputscontainer {
+  position: absolute;
+  bottom: 200px;
+  right: 35%;
+
+  margin: auto;
+
+  width: 30%;
+
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: blue;
+}
+
+.inputtitle {
+  margin: 0;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.inputcontainer {
+  width: 100%;
+}
+
+.input {
+  display: block;
+  margin: 10px auto;
+}
