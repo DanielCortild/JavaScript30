@@ -1,33 +1,30 @@
 body {
-  background-color: #FFC600;
+  background-color: lightblue;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .search-form {
-  max-width: 400px;
-  margin: 50px auto;
+  max-width: 600px;
+  margin: 100px auto;
 }
 
 input {
-  width: 120%;
+  width: 100%;
   padding: 20px;
-
-  position: relative;
-  left: -10%;
 
   margin: 0 auto;
   text-align: center;
+  font-size: 40px;
 
   outline: none;
+  border: 10px solid #D8D8D8;
+  border-radius: 10px;
 
-  border: 10px solid #F7F7F7;
+  position: relative;
   top: 10px;
   z-index: 2;
-
-  border-radius: 10px;
-  font-size: 40px;
 }
 
 .suggestions {
@@ -36,9 +33,12 @@ input {
 
 .suggestions li {
   list-style: none;
-  border-bottom: 1px solid #D8D8D8;
+
+  border-bottom: 1px solid grey;
   padding: 20px;
+
   transition: all 0.2s;
+
   display: flex;
   justify-content: space-between;
 }
@@ -62,5 +62,5 @@ input {
 }
 
 .highlight {
-  background: #FFC600;
+  background: yellow;
 }
