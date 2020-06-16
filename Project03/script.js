@@ -1,7 +1,6 @@
 var inputs;
 window.onload = function() {
   inputs = document.querySelectorAll('.inputcontainer input');
-
   inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
 }
 
