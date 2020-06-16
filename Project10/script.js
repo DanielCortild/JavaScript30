@@ -1,25 +1,17 @@
 const checkBoxes = document.querySelectorAll("input[type='checkbox'");
 let lastCheckedIndex = 0;
-let shiftDown = false;
 
 checkBoxes.forEach((checkBox, index) => {
   checkBox.addEventListener('click', e => {
     if(checkBox.checked) {
       if(e.shiftKey) {
-        if(index < lastCheckedIndex) {
-          for(let i = index; i <= lastCheckedIndex; i++){
-            checkBoxes[i].checked = true;
-          }
-        } else {
-          for(let i = index; i >= lastCheckedIndex; i--){
-            checkBoxes[i].checked = true;
-          }
-        }
+        let inBetween = false;
+        checkBoxes.forEach((box, i) => {
+          if((i === index && lastCheckedIndex) || i === lastCheckedIndex) inBetween = !inBetween;
+          if(inBetween) box.checked = true;
+        });
       }
       lastCheckedIndex = index;
-    }
+    } else lastCheckedIndex = null
   });
-})
-
-document.addEventListener('keydown', e => { if(e.keyCode === 16) shiftDown = true });
-document.addEventListener('keyup', e => { if(e.keyCode === 16) shiftDown = false });
+});
