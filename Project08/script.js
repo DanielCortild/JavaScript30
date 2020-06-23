@@ -5,6 +5,7 @@ canvas.height = window.innerHeight;
 
 ctx.lineJoin = "round";
 ctx.lineCap = "round";
+ctx.lineWidth = 3;
 
 let isDrawing = false;
 let lastX, lastY;
