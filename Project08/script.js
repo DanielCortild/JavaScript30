@@ -8,12 +8,11 @@ ctx.lineCap = "round";
 
 let isDrawing = false;
 let lastX, lastY;
-let hue = 0, wid = 0;
+let hue = 0;
 
 draw = (e) => {
   if(!isDrawing) return;
   ctx.strokeStyle = `hsl(${hue++}, 100%, 60%)`;
-  ctx.lineWidth = wid < 50 ? wid++ : 50;
   ctx.beginPath();
   ctx.moveTo(lastX, lastY);
   ctx.lineTo(e.offsetX, e.offsetY);
